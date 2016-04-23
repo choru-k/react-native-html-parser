@@ -1,29 +1,69 @@
-# XMLDOM [![Build Status](https://secure.travis-ci.org/bigeasy/xmldom.png?branch=master)](http://travis-ci.org/bigeasy/xmldom) [![Coverage Status](https://coveralls.io/repos/bigeasy/xmldom/badge.png?branch=master)](https://coveralls.io/r/bigeasy/xmldom) [![NPM version](https://badge.fury.io/js/xmldom.png)](http://badge.fury.io/js/xmldom)
+# react-native-html-parser
 
-A JavaScript implementation of W3C DOM for Node.js, Rhino and the browser. Fully
-compatible with `W3C DOM level2`; and some compatible with `level3`. Supports
-`DOMParser` and `XMLSerializer` interface such as in browser.
+can use html parser in react-native, titanium, and anywhere. This is based on [xmldom](https://github.com/jindw/xmldom).
 
 Install:
 -------
->npm install xmldom
+>npm install react-native-html-parser
 
 Example:
 ====
 ```javascript
-var DOMParser = require('xmldom').DOMParser;
+import React, {
+    Component,
+    View,
+    Text,
+    StyleSheet,
+    TextInput,
+    WebView,
+} from 'react-native'
+
+
+var DomParser = require('react-native-html-parser').DOMParser
+class TestReactNativeHtmlParser extends Component {
+    componentDidMount() {
+        let html = `<html>
+                        <body>
+                            <div id="b">
+                                <a href="example.org">
+                                <div class="inA">
+                                    <br>bbbb</br>
+                                </div>
+                            </div>
+                            <div class="bb">
+                                Test
+                            </div>
+                        </body>
+                    </html>`
+        let doc = new DomParser().parseFromString(html,'text/html')
+        
+        console.log(doc.querySelect('#b .inA'))
+        console.log(doc.getElementsByTagName('a'))
+        console.log(doc.querySelect('#b a[href="example.org"]'))
+    }
+    
+}
+```
+or
+```javascript
+var DOMParser = require('react-native-html-parser').DOMParser;
 var doc = new DOMParser().parseFromString(
-    '<xml xmlns="a" xmlns:c="./lite">\n'+
-        '\t<child>test</child>\n'+
-        '\t<child></child>\n'+
-        '\t<child/>\n'+
-    '</xml>'
-    ,'text/xml');
-doc.documentElement.setAttribute('x','y');
-doc.documentElement.setAttributeNS('./lite','c:x','y2');
-var nsAttr = doc.documentElement.getAttributeNS('./lite','x')
-console.info(nsAttr)
-console.info(doc)
+    '<html><body>'+
+    '<div id="a" class="a">'+
+        '<a class="b">abcd</a>'+
+    '</div>'+
+    '<div class="b">'+
+        '<a href="aa" id="b">'+
+    '</div>'+
+    '</body></html>'
+    ,'text/html');
+
+console.log(doc.getElementsByAttribute('class', 'b'));
+console.log(querySelecotr('.div.aa       class#a a'))
+console.log(findSelector('div.aa#in[ii="a"]'))
+console.log(doc.querySelect('div.a a.b'))
+console.log('end')
+
 ```
 API Reference
 =====
@@ -107,6 +147,8 @@ DOM level2 method and attribute:
 			createAttributeNS(namespaceURI, qualifiedName)
 			getElementsByTagNameNS(namespaceURI, localName)
 			getElementById(elementId)
+            getElementByClassName(classname)
+            querySelect(query) // querySelect only support tagName,className,Attribute,id, parent descendant
 
  * [DocumentFragment](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-B63ED1A3) : Node
  * [Element](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-745549614) : Node
@@ -129,6 +171,8 @@ DOM level2 method and attribute:
 			getElementsByTagNameNS(namespaceURI, localName)
 			hasAttribute(name)
 			hasAttributeNS(namespaceURI, localName)
+            getElementByClassName(classname)
+            querySelect(query) // querySelect only support tagName,className,Attribute,id, parent descendant
 
  * [Attr](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-637646024) : Node
 	
