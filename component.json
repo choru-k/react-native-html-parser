@@ -1,0 +1,10 @@
+{
+  "name": "react-native-html-parser",
+  "version": "0.0.1",
+  "main": "dom-parser.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

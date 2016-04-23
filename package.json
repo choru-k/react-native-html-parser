@@ -1,0 +1,100 @@
+{
+  "name": "react-native-html-parser",
+  "version": "0.0.1",
+  "description": "can use html/xml parser in react-native/titanium/browser anywhere",
+  "keywords": [
+    "dom",
+    "xml",
+    "html",
+    "parser",
+    "javascript",
+    "DOMParser",
+    "XMLSerializer",
+    "ReactNative",
+    "titanium"
+  ],
+  "author": {
+    "name": "Cheol",
+    "email": "g6lingpdev@gmail.com"
+  },
+  "homepage": "https://github.com/g6ling/xmldom",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/g6ling/xmldom.git"
+  },
+  "main": "./dom-parser.js",
+  "engines": {
+    "node": ">=0.1"
+  },
+  "dependencies": {},
+  "maintainers": [
+    {
+      "name": "cheol",
+      "email": "g6lingpdev@gmail.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "jindw",
+      "email": "jindw@xidea.org"
+    },
+    {
+      "name": "yaron",
+      "email": "yaronn01@gmail.com"
+    },
+    {
+      "name": "bigeasy",
+      "email": "alan@prettyrobots.com"
+    },
+    {
+      "name": "kethinov",
+      "email": "kethinov@gmail.com"
+    },
+    {
+      "name": "jinjinyun",
+      "email": "jinyun.jin@gmail.com"
+    },
+    {
+      "name": "Yaron Naveh",
+      "email": "yaronn01@gmail.com",
+      "url": "http://webservices20.blogspot.com/"
+    },
+    {
+      "name": "Harutyun Amirjanyan",
+      "email": "amirjanyan@gmail.com",
+      "url": "https://github.com/nightwing"
+    },
+    {
+      "name": "Alan Gutierrez",
+      "email": "alan@prettyrobots.com",
+      "url": "http://www.prettyrobots.com/"
+    }
+  ],
+  "bugs": {
+    "url": "http://github.com/g6ling/xmldom/issues",
+    "email": "g6lingpdev@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "LGPL",
+      "url": "http://www.gnu.org/licenses/lgpl.html",
+      "MIT": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "gitHead": "29a83b315aef56c156602286b2d884a3b4c2521f",
+  "_id": "xmldom@0.1.22",
+  "_shasum": "10de4e5e964981f03c8cc72fadc08d14b6c3aa26",
+  "_from": "xmldom@latest",
+  "_npmVersion": "3.3.12",
+  "_nodeVersion": "5.5.0",
+  "_npmUser": {
+    "name": "jindw",
+    "email": "jindw@xidea.org"
+  },
+  "dist": {
+    "shasum": "10de4e5e964981f03c8cc72fadc08d14b6c3aa26",
+    "tarball": "https://registry.npmjs.org/xmldom/-/xmldom-0.1.22.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/xmldom/-/xmldom-0.1.22.tgz"
+}
