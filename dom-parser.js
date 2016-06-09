@@ -9,9 +9,9 @@ DOMParser.prototype.parseFromString = function(source,mimeType){
 	var errorHandler = options.errorHandler;
 	var locator = options.locator;
 	var defaultNSMap = options.xmlns||{};
-  if(typeof require == 'function'){
-  	var entityMap = require('./entity-map').EntityMap;
-  }
+	if(typeof require == 'function') {
+		var entityMap = require('./entity-map').EntityMap;
+	}
 	if(locator){
 		domBuilder.setDocumentLocator(locator)
 	}
