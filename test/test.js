@@ -11,8 +11,8 @@ var doc = new DOMParser().parseFromString(
     ,'text/html');
 
 //console.log(doc.getElementsByAttribute('class', 'b'));
-//console.log(querySelecotr('.div.aa       class#a a'))
-//console.log(findSelector('div.aa#in[ii="a"]'))
+//console.log(doc.querySelect('.div.aa       class#a a'))
+//console.log(doc.findSelector('div.aa#in[ii="a"]'))
 //console.log(doc.getElementsBySelector('a[href="aa"]#b'))
 //console.log(doc.getElementsBySelector('div.b'))
 console.log(doc.querySelect('div.a a.b'))
