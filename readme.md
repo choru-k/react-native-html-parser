@@ -63,8 +63,22 @@ console.log(querySelecotr('.div.aa       class#a a'))
 console.log(findSelector('div.aa#in[ii="a"]'))
 console.log(doc.querySelect('div.a a.b'))
 console.log('end')
-
 ```
+or
+```javascript
+import DOMParser from 'react-native-html-parser';
+
+const html = `<p>Hello world <b>world</b> <i>foo</i> abc</p>`;    
+const parser = new DOMParser.DOMParser();
+const parsed = parser.parseFromString(html, 'text/html');
+
+...
+```
+
+# error solution
+#### [xmldom error] entity not found: ~~~~~
+Check this [issue](https://github.com/g6ling/react-native-html-parser/issues/4)
+
 API Reference
 =====
 
