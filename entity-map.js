@@ -154,6 +154,8 @@ var EntityMap = {
 	'clubs': '\u2663', // club
 	'hearts': '\u2665', // heart
 	'diams': '\u2666', // diamond
+        'laquo':'\u00AB', // double left angle
+        'raquo':'\u00BB' // double right angle
 }
 
 if(typeof require == 'function'){
