@@ -4,6 +4,8 @@ var EntityMap = {
 	'amp': '&',
 	'quot': '"',
 	'apos': "'",
+	'laquo': '«',
+	'raquo': '»',
 
 	// Math
 
