@@ -1,6 +1,6 @@
 {
   "name": "react-native-html-parser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "can use html/xml parser in react-native/titanium/browser anywhere",
   "keywords": [
     "dom",
