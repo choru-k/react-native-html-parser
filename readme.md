@@ -60,7 +60,7 @@ var doc = new DOMParser().parseFromString(
 
 console.log(doc.getElementsByAttribute('class', 'b'));
 console.log(querySelecotr('.div.aa       class#a a'))
-console.log(findSelector('div.aa#in[ii="a"]'))
+console.log(getElementsBySelector('div.aa#in[ii="a"]'))
 console.log(doc.querySelect('div.a a.b'))
 console.log('end')
 ```
