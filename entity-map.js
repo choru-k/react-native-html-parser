@@ -16,6 +16,7 @@ var EntityMap = {
 	'Iacute': 'Í',
 	'Oacute': 'Ó',
 	'Uacute': 'Ú',
+	'nbsp': ' ',
 
 	// Math
 
