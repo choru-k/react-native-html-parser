@@ -947,8 +947,8 @@ function selectorToQueryArray(selector) {
        queryArray.push(/\.[a-z,A-Z]+/.exec(selector)[0]); 
     }if(/^[a-z,A-Z]+/.exec(selector)){
        queryArray.push(/^[a-z,A-Z]+/.exec(selector)[0]); 
-    }if(/\[[a-z,A-Z]+\=((\'[a-z,A-Z]+\')|(\"[a-z,A-Z]+\"))]/.exec(selector)){
-       queryArray.push(/\[[a-z,A-Z]+\=((\'[a-z,A-Z]+\')|(\"[a-z,A-Z]+\"))]/.exec(selector)[0]); 
+    }if(/\[[a-z,A-Z]+\=((\'[\w,-]+\')|(\"[\w,-]+\"))]/.exec(selector)){
+        queryArray.push(/\[[a-z,A-Z]+\=((\'[\w,-]+\')|(\"[\w,-]+\"))]/.exec(selector)[0]);
     }
     
     queryArray.sort(function (a,b) {
