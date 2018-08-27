@@ -646,7 +646,7 @@ Document.prototype = {
 		}
 		return rtv;
 	},
-	
+
 	//document factory method:
 	createElement :	function(tagName){
 		var node = new Element();
@@ -917,14 +917,14 @@ Element.prototype = {
                 queryArray.push(ele)
             }
         })
-		
+
 		var elementQueue = [this]
 		for(var index=0 ; index<queryArray.length ; index++) {
 			var gotElementConcatArray = []
 			while(elementQueue.length != 0){
 				elem = elementQueue.pop()
 				var arrayedElem = Array.prototype.slice.call(elem.getElementsBySelector(queryArray[index]))
-				gotElementConcatArray = gotElementConcatArray.concat(arrayedElem)					
+				gotElementConcatArray = gotElementConcatArray.concat(arrayedElem)
 			}
 			elementQueue = elementQueue.concat(gotElementConcatArray)
 		}
@@ -942,15 +942,15 @@ function selectorToQueryArray(selector) {
 	var queryArray = []
 	var testElem = /\[[a-z,A-Z]+\=((\'[a-z,A-Z]+\')|(\"[a-z,A-Z]+\"))]/.exec(selector)
     if(/\#[a-z,A-Z]+/.exec(selector)){
-       queryArray.push(/#[a-z,A-Z]+/.exec(selector)[0]); 
-    }if(/\.[a-z,A-Z]+/.exec(selector)){
-       queryArray.push(/\.[a-z,A-Z]+/.exec(selector)[0]); 
+       queryArray.push(/#[a-z,A-Z]+/.exec(selector)[0]);
+    }if(/\.[a-z,A-Z]+(?![^\[]*\])/.exec(selector)){
+       queryArray.push(/\.[a-z,A-Z]+(?![^\[]*\])/.exec(selector)[0]);
     }if(/^[a-z,A-Z]+/.exec(selector)){
-       queryArray.push(/^[a-z,A-Z]+/.exec(selector)[0]); 
-    }if(/\[[a-z,A-Z]+\=((\'[\w:,-]+\')|(\"[\w:,-]+\"))]/.exec(selector)){
-        queryArray.push(/\[[a-z,A-Z]+\=((\'[\w:,-]+\')|(\"[\w:,-]+\"))]/.exec(selector)[0]);
+       queryArray.push(/^[a-z,A-Z]+/.exec(selector)[0]);
+    }if(/\[[a-z,A-Z]+\=((\'[\w:,-\.]+\')|(\"[\w:,-\.]+\"))]/.exec(selector)){
+        queryArray.push(/\[[a-z,A-Z]+\=((\'[\w:,-\.]+\')|(\"[\w:,-\.]+\"))]/.exec(selector)[0]);
     }
-    
+
     queryArray.sort(function (a,b) {
         return a.index - b.index
     })
