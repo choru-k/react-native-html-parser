@@ -17,10 +17,10 @@
     "name": "Cheol",
     "email": "g6lingpdev@gmail.com"
   },
-  "homepage": "https://github.com/g6ling/xmldom",
+  "homepage": "https://github.com/g6ling/react-native-html-parser",
   "repository": {
     "type": "git",
-    "url": "git://github.com/g6ling/xmldom.git"
+    "url": "git://github.com/g6ling/react-native-html-parser.git"
   },
   "main": "./dom-parser.js",
   "engines": {
