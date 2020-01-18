@@ -821,11 +821,11 @@ Element.prototype = {
 			return ls;
 		});
 	},
-	getElementsByClassName : function(className){
+	getElementsByClassName : function(className, exactMatch = true){
 		return new LiveNodeList(this,function(base){
 			var ls = [];
 			_visitNode(base,function(node){
-				if(node !== base && node.nodeType == ELEMENT_NODE && node.hasAttribute('class') && (node.getAttribute('class') == className)){
+				if(node !== base && node.nodeType == ELEMENT_NODE && node.hasAttribute('class') && (exactMatch ? node.getAttribute('class') === className : node.getAttribute('class').replace(/\s+/g, ' ').trim().split(" ").includes(className))){
 					ls.push(node);
 				}
 			});
