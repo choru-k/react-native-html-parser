@@ -1,6 +1,6 @@
 {
   "name": "react-native-html-parser",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "can use html/xml parser in react-native/titanium/browser anywhere",
   "keywords": [
     "dom",
@@ -71,7 +71,7 @@
     }
   ],
   "bugs": {
-    "url": "http://github.com/g6ling/xmldom/issues",
+    "url": "http://github.com/g6ling/react-native-html-parser/issues",
     "email": "g6lingpdev@gmail.com"
   },
   "licenses": [

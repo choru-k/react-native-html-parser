@@ -24,13 +24,13 @@ class TestReactNativeHtmlParser extends Component {
     componentDidMount() {
         let html = `<html>
                         <body>
-                            <div id="b">
+                            <div id="b a">
                                 <a href="example.org">
                                 <div class="inA">
                                     <br>bbbb</br>
                                 </div>
                             </div>
-                            <div class="bb">
+                            <div class="bb a">
                                 Test
                             </div>
                         </body>
@@ -39,7 +39,8 @@ class TestReactNativeHtmlParser extends Component {
         
         console.log(doc.querySelect('#b .inA'))
         console.log(doc.getElementsByTagName('a'))
-        console.log(doc.querySelect('#b a[href="example.org"]'))
+				console.log(doc.querySelect('#b a[href="example.org"]'))
+				console.log(doc.getElementsByClassName('a', false))
     }
     
 }
